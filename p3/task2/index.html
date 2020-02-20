@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style='background-color:tomata'>
+<p style='font-size:20;font-weight:bold'>Input the prime modulus (P), the generator (G) and the order (Q):</p>
+<span style='font-size:20;font-weight:bold;margin-right:40.2%'>P:</span><input type='text' id='t1'>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:40%'>G:</span><input id='t2' type='text'>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:40%'>Q:</span><input type='text' id='t3'>
+<br><br>	
+<button id='random'>Random x</button>
+<br><br>
+<span style='font-size:20;font-weight:bold;margin-right:32.5%'>Private key X:</span><input type='text' id='t4'><span style='font-size:20;font-weight:bold;'>1&ltx&ltQ</span>
+<p style='font-size:20;font-weight:bold'>Calculate Y</p>
+<button id='y'>Generate</button>
+<br>
+<br> 
+<span style='font-size:20;font-weight:bold;margin-right:40%'>Y:</span><input type='text' id='t5'><span style='font-size:20;font-weight:bold;'>G<sup>x</sup> mod p
+</span>
+<p style='font-size:20;font-weight:bold'>The public key is now [P,Y,G] The Private key is x then create a message</p>
+<span style='font-size:20;font-weight:bold;margin-right:30%'>Input Message M:</span><input type='text' id='t6'>
+<p style='font-size:20;font-weight:bold'>Select a random value (k), and calculates two new values (a and b)</p>
+<button id='random2'>Random K</button>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:30%'>k (random value):</span><input type='text' id='t7'><span style='font-size:20;font-weight:bold;'>1&ltx&ltQ</span>
+<br>
+<br>
+<button id='encrypt'>Encrypt</button>
+<br>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:36.5%'>a value:</span><input type='text' id='t8'><span style='font-size:20;font-weight:bold;'>G<sup>k</sup> mod p
+</span>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:36.5%'>b value:</span><input type='text' id='t9'><span style='font-size:20;font-weight:bold;'>Y<sup>k</sup> M mod p
+</span>
+<p style='font-size:20;font-weight:bold'>Next Bob Decrypts the message</p>
+<button id='decrypt'>Decrypt</button>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:41.5%'></span><input type='text' id='t10'>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:28%'>Message (decrypted)</span>
+<span style='font-size:20;font-weight:bold;'>M(plain)=b/a<sup>x</sup> Mod P</span>
+<p style='font-size:20;font-weight:bold'>Multiplication Over Encrypted Data</p>
+<span style='font-size:20;font-weight:bold;margin-right:39.5%'>N1:</span><input type='text' id='t11'><span style='font-size:20;font-weight:bold;'> (an integer less than p)
+</span>
+<span style='font-size:20;font-weight:bold;margin-right:39.5%'>N2:</span><input type='text' id='t12'><span style='font-size:20;font-weight:bold;'> (an integer less than p)
+</span>
+<span style='font-size:20;font-weight:bold;margin-right:39.5%'>N3:</span><input type='text' id='t13'><span style='font-size:20;font-weight:bold;'> (an integer less than p)
+</span>
+<span style='font-size:20;font-weight:bold;margin-right:39.5%'>N4:</span><input type='text' id='t14'><span style='font-size:20;font-weight:bold;'> (an integer less than p)
+</span>
+<span style='font-size:20;font-weight:bold;margin-right:39.5%'>N5:</span><input type='text' id='t15'><span style='font-size:20;font-weight:bold;'> (an integer less than p)
+</span>
+<br>
+<button id='multiply'>Multiply</button>
+<table>
+<tr><td><span style='font-size:20;font-weight:bold;'>Encrypted N1</span></td><td><span style='font-size:20;font-weight:bold;'>Encrypted N2</span></td><td><span style='font-size:20;font-weight:bold;'>Encrypted N3</span></td><td><span style='font-size:20;font-weight:bold;'>Encrypted N4</span></td><td><span style='font-size:20;font-weight:bold;'>Encrypted N5</span></td></tr>
+<tr><td><input type='text' id='t16'></td><td><input type='text' id='t17'></td><td><input type='text' id='t18'></td><td><input type='text' id='t19'></td><td><input type='text' id='t20'></td></tr>
+</table>
+<span style='font-size:20;font-weight:bold;margin-right:36%'>Product of Encrypted Numbers: </span><input type='text' id='t21'>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:39.5%'>Product of plain Numbers: </span><input type='text' id='t22'>
+<br>
+<span style='font-size:20;font-weight:bold;margin-right:29%'>Decrypted Product of Encrypted Numbers: </span><input type='text' id='t23'>
+<script type="text/javascript" src='main.js'></script>
+</body>
+</html>
